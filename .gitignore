@@ -1,5 +1,4 @@
-/.phpunit.cache
-/node_modules
+/zoho
 /public/build
 /public/hot
 /public/storage

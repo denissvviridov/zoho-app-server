@@ -16,3 +16,10 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::post('/exchange-code', [\App\Http\Controllers\GetAccessTokenController::class, 'getAccessToken']);
+Route::post('/refresh-token', [\App\Http\Controllers\GetAccessTokenController::class, 'refreshAccessToken']);
+Route::post('/create-deal', [\App\Http\Controllers\CreateDealController::class, 'CreateDeal']);
+
+
+
