@@ -9,6 +9,11 @@ use Illuminate\Support\Facades\Http;
 class GetAccessTokenController extends Controller
 {
 
+     public function redirectToZoho()
+    {
+        return redirect()->away('https://accounts.zoho.com/oauth/v2/auth?scope=ZohoCRM.modules.ALL&client_id=1000.5Y3XAHM4OY62F5DOPA6PWEW5NVXJHI&redirect_uri=http://localhost:5173/create-deal&response_type=code&access_type=offline');
+    }
+
     public function getAccessToken(Request $request)
     {
         $code = $request->input('code');
